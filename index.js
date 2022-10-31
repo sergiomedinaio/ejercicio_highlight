@@ -6,6 +6,7 @@ const generateProducts = () => {
     products.push({name: "Pimiento Rojo", price: 499.0});
     products.push({name: "Sandia", price: 169.0});
     products.push({name: "Zanahoria", price: 129.0});
+    products.push({name: "TV 8K", price: 350000.0});
     return products;
 }
 
