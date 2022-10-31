@@ -10,6 +10,19 @@ const generateProducts = () => {
     return products;
 }
 
+const addProduct = (product, products) => {
+    if(!product.name.length) { //product.name == ''
+        alert(`El campo esta vacio`);
+        return;
+    }
+    const existingProduct = products.find((item) => item.name == product.name);
+    if(existingProduct) {
+        alert(`El producto ${product.name} ya existe en la lista`);
+        return;
+    }
+    products.push(product);
+}
+
 const generateHtml = (products) => {
     return products.map(product => {
         return `
@@ -26,6 +39,9 @@ const generateHtml = (products) => {
 }
 
 const listOfProduct = generateProducts();
+//addProduct({name: "TV 8K", price: 350000.0}, listOfProduct);
+addProduct({name: "Cable hdmi", price: 399.0}, listOfProduct);
+addProduct({name: "", price: 399.0}, listOfProduct);
 const listOfItems = generateHtml(listOfProduct);
 const htmlList = `<ul>${listOfItems.join('')}</ul>`;
 
