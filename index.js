@@ -9,5 +9,15 @@ const generateProducts = () => {
     return products;
 }
 
+const generateHtml = (products) => {
+    return products.map(product => {
+        return `<li>${product.name} a solo $${product.price}</li>`;
+    })
+}
 
 const listOfProduct = generateProducts();
+const listOfItems = generateHtml(listOfProduct);
+const htmlList = `<ul>${listOfItems.join('')}</ul>`;
+
+const highlightList = document.getElementById('highlight__list');
+highlightList.innerHTML = htmlList;
