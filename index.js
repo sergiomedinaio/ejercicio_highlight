@@ -11,7 +11,7 @@ const generateProducts = () => {
 
 const generateHtml = (products) => {
     return products.map(product => {
-        return `<li>${product.name} a solo $${product.price}</li>`;
+        return `<li class="highlight__content__item">${product.name} a solo $${product.price}</li>`;
     })
 }
 
