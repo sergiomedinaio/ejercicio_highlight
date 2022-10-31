@@ -1,3 +1,7 @@
 .highlight__content__item {
-    color: green;
+    color: rgb(12, 121, 12);
+}
+
+.highlight__content__item--higher {
+    color: rgb(181, 31, 31);
 }
